@@ -70,3 +70,6 @@ start = "ccls"
 
 [agent]
 expertMode = true
+
+[deployment]
+deploymentTarget = "cloudrun"
