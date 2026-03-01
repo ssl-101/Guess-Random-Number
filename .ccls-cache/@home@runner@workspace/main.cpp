@@ -1,23 +1,22 @@
-//This Program calculates the distance a car can travel
-// on a tank of gas. 
+//This Program calculates energy drink consumption.
 #include <iostream>
 using namespace std;
 
 int main()
 {
-  const double tankSize = 20; //gallons
-  const double townMPG = 23.5; // MPG in town
-  const double highwayMPG = 8.9; // MPG on highway
 
-  //Calculations for distance
-   double distanceTown =tankSize * townMPG;
-   double distanceHW =tankSize * highwayMPG;
+//Given information
+  const double customers = 16500; // customers surveyed 
+  const double percentPurchase = 0.15; // purchased one or more  
+  const double percentCitrus = 0.58; // citrus flavor purchase 
 
-  cout <<" With " <<  tankSize  << " gallons of gas, the car will drive " <<endl; 
-  cout << distanceTown <<" miles in town. "<<endl;
-  cout <<" With "<<  tankSize << " gallons of gas, the car will drive "<<endl;
-  cout <<  distanceHW  <<" miles on the highway."<<endl;
+//Calculations
+  const double oneorMore = customers * percentPurchase;
+  const double citrus = oneorMore * percentCitrus;
+
+//Conclusion
+  cout << "In the survey taken of 16,500 customers, \n" << oneorMore << " customers purchased one or more energy drinks." <<endl;
+  cout << "Out of the customers that purchased one or more energy drinks,\n" << citrus << " customers purchased citrus flavored energy drinks." <<endl;
 
   return 0;
-  
-   }
+}
