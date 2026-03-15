@@ -1,31 +1,32 @@
-//This program will display the ingredient ratio for a cookie recipe.
+//This program will display simple math problems
+//for a tutoring program.
 #include <iostream>
-#include <iomanip>
+#include <random>
 using namespace std;
 
 int main()
 {
 
-//base recipie
-  const double sugar_for_one = 1.5 / 48; // sugar amount
-  const double butter_for_one = 1.0 / 48; // butter amount  
-  const double flour_for_one = 2.75 / 48; // flour amount
+//random number generator.
+ std::random_device rd;
+ std::mt19937 gen(rd());
+ std::uniform_int_distribution<> dist(1, 100);
 
-  double input_amount;
-
-  cout << "Enter the amount of cookies you are making: ";
-  cin >> input_amount; 
-
-//Calculations
-  const double required_sugar = sugar_for_one * input_amount;
-  const double required_butter = butter_for_one * input_amount;
-  const double required_flour = flour_for_one * input_amount;
-
-//Conclusion
-  cout << fixed << setprecision(2);
-  cout << "Sugar:  " << required_sugar << "  cups"<< endl;
-  cout << "Butter:  " << required_butter << "  cups" << endl;
-  cout << "Flour:  " << required_flour << "  cups"<< endl;
-
-  return 0;
+// 2 numbers for the simple addition problem.
+ int firstNumber = dist(gen);
+ int secondNumber = dist(gen);
+ int answer;
+ int correctAnswer = firstNumber + secondNumber;
+  
+//Simple addition problem
+  cout << "Solve the problem below. Enter your answer" << endl;
+  cout << firstNumber << " + " << secondNumber << " =?" << endl;
+  
+  cin >>answer;
+  cout<< "Correct answer: "<< correctAnswer << endl;
+  
+  cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  cin.get();
+  
+   return 0;
 }
