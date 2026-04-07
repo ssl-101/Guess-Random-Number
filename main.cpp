@@ -1,49 +1,45 @@
-//This program displays days with in a month 
-// including leap year adjustments.
+//This program calculates rate of a package
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main()
 {
 
 //Variables
-  int MONTH, YEAR, DAYS;
-  cout << "Enter month (1-12): ";
-  cin >> MONTH; 
-
-//if else to also verify user entry
-  if (MONTH <1 || MONTH > 12)
-  { 
-    cout << "Invalid entry.Please enter valid month, 1-12."<< endl;
-  }
-  else
-  {
-    cout<<"Enter year:";
-    cin >> YEAR;
-    if (YEAR <0)
-    {
-      cout << "Invalid entry.Please enter valid year." << endl;
-    }
-     else
-    {
-      switch(MONTH)
-        {
-          case 4: case 6: case 9: case 11:
-          DAYS = 30; 
-        break;
-          case 2:
-          if ((YEAR % 4 == 0 && YEAR % 100 !=0) || (YEAR % 400 == 0))
-          DAYS = 29;
-       else
-          DAYS = 28;
-        break;
-       default:
-          DAYS = 31;
-          break;
-        }
-      cout << DAYS << "  days in the month."<< endl;
-    }
-  }
+double RATE, DISTANCE, WEIGHT;
   
+  cout << "Enter package weight in kg: "<< endl;
+  cin >> WEIGHT;
+
+ if (WEIGHT <= 0 || WEIGHT > 20 )
+ { 
+   cout <<"invalid weight entery, must be between 1 and 20 kg."<< endl;
+   return 0;
+ }
+  cout << "Enter distance in miles:"<< endl;
+  cin >> DISTANCE;
+ 
+   if (DISTANCE < 10 || DISTANCE >3000)
+   {
+     cout<< "Invalid distance entery, must be between 10 and 3000 miles"<< endl;
+     return 0;
+   }
+  
+//Cost per weight
+   if (WEIGHT <=2) RATE = 1.10;
+    else if (WEIGHT > 2 && WEIGHT <= 6) RATE = 2.20;
+    else if (WEIGHT > 6 && WEIGHT <= 10) RATE = 3.70;
+   else RATE = 4.80;
+
+//Distance calculations
+
+ double TOTAL = ceil(DISTANCE / 500) * RATE ;
+  cout << fixed << setprecision(2)<< showpoint;
+  cout << "Total cost: $"<< TOTAL << endl;
+
+
+
   return 0;
 }
