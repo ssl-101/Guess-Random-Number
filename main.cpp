@@ -8,13 +8,13 @@ int main()
 
 //Variables
   int MONTH, YEAR, DAYS;
-  cout << "Enter month: ";
+  cout << "Enter month (1-12): ";
   cin >> MONTH; 
 
 //if else to also verify user entry
   if (MONTH <1 || MONTH > 12)
   { 
-    cout << "Invalid entry, must enter a number 1-12"<< endl;
+    cout << "Invalid entry.Please enter valid month, 1-12."<< endl;
   }
   else
   {
@@ -22,7 +22,7 @@ int main()
     cin >> YEAR;
     if (YEAR <0)
     {
-      cout << "Invalid entry, year must not be negative." << endl;
+      cout << "Invalid entry.Please enter valid year." << endl;
     }
      else
     {
