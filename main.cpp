@@ -8,6 +8,11 @@ using namespace std;
 
 int main;
 {
+
+  const int popAmount = 1000; //population
+  const int beginingYear = 1900; //begining year
+  const int betweenInt = 20;//intreval inbetween years
+  
   string file;
   ifstream inFile;
 
@@ -24,7 +29,7 @@ int main;
   }
 
   cout<< "PEOPLE DISPLAY CHART "<< endl;
-  cout<< "Every * displays 1000 people" <<endl;
+  cout<< "(Every * displays 1000 people)" <<endl;
 
   
 }
