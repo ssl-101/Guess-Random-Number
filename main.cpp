@@ -13,6 +13,15 @@ int main()
       }
         cout<<endl;
     }
+  // B
+
+  for (int i =10; i >=1; i--)
+    {
+      for(int j =0; j< i; j++)
+      }
+       cout<<"*"
+    }
+       cout << endl;
 
   return 0; 
 }
