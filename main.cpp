@@ -1,50 +1,18 @@
-//this program will display
-//a population bar chart.
+//this program will display patterns
 #include <iostream>
-#include <fstream>
-#include <string>
-
-using namespace std;
+using namespace sdt;
 int main()
 {
+  //A
 
-  const int popAmount = 1000; //population
-  const int beginingYear = 1900; //begining year
-  const int betweenInt = 20;//intreval inbetween years
-  
-  string file;
-  ifstream inFile;
+  for (i = 1; i<=10; i++)
+    {
+     for int (j= 0; j <i j++)
+      {
+        cout<<"*"
+      }
+        cout<<endl;
+    }
 
-
- cout<< "Enter file name: "<<endl;
- cin >> file ;
-
-  inFile.open(file);
-
-  if (!inFile) {
-    cout<< "Error opening file"<<endl;
-      return 1;
-  }
-
-  cout<< "POPULATION DISPLAY CHART "<< endl;
-  cout<< "(Every * displays 1000 people)" <<endl;
-
-  int POP;
-  int year= beginingYear;
-
-  while (inFile >> POP) {
-    cout << year<<":";
-    int STARS = POP/popAmount;
-    for (int i= 0; i <STARS; i++)
-   {
-  cout <<"*";
-   }
-  cout <<endl;
-  year += betweenInt;
-  }
-  inFile.close();
-
-
-  return 0;
-  
+  return 0; 
 }
