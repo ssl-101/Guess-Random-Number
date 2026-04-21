@@ -30,7 +30,7 @@ int main()
       cout<<"Nope! Guessed too high. Try again :"<<endl;
     }
   }
-    cout<<"Congrats! you got it in" << guessTotal << "tries! "<<endl;
+    cout<<"Congrats! you got it in  " <<  guessTotal <<"  tries! "<<endl;
   
   return 0; 
 }
