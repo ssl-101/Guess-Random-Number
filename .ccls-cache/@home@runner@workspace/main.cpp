@@ -12,6 +12,14 @@ int main()
   uniform_int_distribution<> dist (1,25)
 
   randomNumber= dist(gen)
+
+  cout<<"Guess the number, 1 through 25: "<<endl;
+  cin>> inputNumber;
+  
+  while( inputNumber != randomNumber){
+   cin>> inputNumber;
+    guessTotal++;
     
+  }
   return 0; 
 }
