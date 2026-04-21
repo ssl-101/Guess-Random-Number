@@ -14,7 +14,7 @@ int main()
   randomNumber= dist(gen);
 
   cout<<"Guess the number, 1 through 25: "<<endl;
-  cin>> inputNumber;
+  
   
   while( inputNumber != randomNumber){
    cin>> inputNumber;
