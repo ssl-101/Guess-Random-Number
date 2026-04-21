@@ -1,10 +1,11 @@
-//this program will display patterns
+//this program is a number guesing game
+//that uses a random number generator. 
 #include <iostream>
 #include <random>
 using namespace std;
 int main()
 {
-  int randomNumber, inputNumber, guessTotal= 0;
+  int randomNumber, inputNumber = 0, guessTotal= 0;
 
   //random generator
   random_device rd;
@@ -24,7 +25,7 @@ int main()
     {
       cout<<" Nope! Guessed too low. Try again :"<<endl;
     }
-     else ( inputNumber > randomNumber);
+     else if ( inputNumber > randomNumber)
     {
       cout<<"Nope! Guessed too high. Try again :"<<endl;
     }
