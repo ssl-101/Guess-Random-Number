@@ -15,7 +15,6 @@ int main()
   string file;
   ifstream inFile;
 
-  const int perPeople = 1000;
 
  cout<< "Enter file name: "<<endl;
  cin >> file ;
@@ -40,7 +39,7 @@ int main()
    {
   cout <<"*";
    }
-  cout <<endl:
+  cout <<endl;
   year += betweenInt;
   }
   inFile.close();
