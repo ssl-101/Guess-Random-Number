@@ -1,4 +1,4 @@
-//this program is a number guesing game
+//this program is a number guessing game
 //that uses a random number generator. 
 #include <iostream>
 #include <random>
